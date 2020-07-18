@@ -13,6 +13,5 @@ int main()
     {
         cout << (a + b > c + d ? "Left" : "Right") << "\n";
     }
-
     return 0;
 }
