@@ -24,7 +24,7 @@ int main()
             res += i;
         }
     }
-    cout << res << "\n";
 
+    cout << res << "\n";
     return 0;
 }
