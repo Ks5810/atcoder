@@ -17,12 +17,12 @@ int main()
         }
     }
 
-    int cont = 1;
+    int cnt = 1;
     for(auto i: m)
     {
-        if(cont == k)
+        if(cnt == k)
             cout << i << "\n";
-        cont++;
+        cnt++;
     }
     return 0;
 }
