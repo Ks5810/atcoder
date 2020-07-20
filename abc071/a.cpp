@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    char c;
-    cin >> c;
+    int x, a, b;
+    cin >> x >> a >> b;
 
-    cout << (c >= 65 && c <= 90 ? 'A' : 'a') << "\n";
+    cout << (abs(a - x) < abs(b - x) ? 'A' : 'B') << "\n";
     return 0;
 }
