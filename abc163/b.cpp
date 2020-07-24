@@ -15,4 +15,5 @@ int main()
 
     res = n - res;
     cout << (res < 0 ? -1 : res) << "\n"; 
+    return 0;
 }
