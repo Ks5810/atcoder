@@ -20,8 +20,9 @@ int main()
     {
         for(int j = 1; j <= n; ++j)
         {
+            int ij = gcd(i, j);
             for(int k = 1; k <= n; ++k) 
-                res += gcd(gcd(i, j), k);
+                res += gcd(ij, k);
         }
     }
 
