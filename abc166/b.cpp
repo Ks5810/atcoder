@@ -19,8 +19,9 @@ int main()
 
     for(auto i: snu)
     {
-        res += i ? 0 : 1;
+        if(!i) res++;
     }
 
     cout << res << "\n";
+    return 0;
 }

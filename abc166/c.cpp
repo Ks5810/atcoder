@@ -14,8 +14,7 @@ int main()
 
     for(int i = 0; i < m; ++i)
     {
-        cin >> from;
-        cin >> to;
+        cin >> from >> to;
         edges[from].insert(to);
         edges[to].insert(from);
     }
