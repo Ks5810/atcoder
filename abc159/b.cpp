@@ -2,7 +2,8 @@
 using namespace std;
 using ll = long long;
 
-bool isPalindrome(string s){
+bool isPalindrome(string s)
+{
     string t(s.rbegin(),s.rend());
     return s == t;
 }
