@@ -4,26 +4,25 @@ using ll = long long;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int n, k, tmp;
+    double res = 0;
+    cin >> n >> k;
 
-    vector<int> a(n);
+    vector<double> s(n + 1);
     for(int i = 0; i < n; ++i)
     {
-        cin >> a[i];
-    }
-
-    int res = INT_MAX;
-    for(int i = 0; i < 101; ++i)
-    {
-        int sum = 0;
-        for(int j = 0; j < n; ++j)
+        cin >> tmp;
+        double pt = 0;
+        for(int j = 1; j <= tmp; ++j)
         {
-            sum += (a[j] - i) * (a[j] - i);
+            pt += double(j * (1 / (double) tmp));
         }
-        res = min(sum, res);
+        s[i + 1] = s[i] + pt;
     }
 
-    cout << res << "\n";
+    for(int i = 0; i <= n - k; ++i)
+        res = max(s[i + k] - s[i], res);
+
+    cout << setprecision(10) << fixed << res << "\n";
     return 0;
 }
