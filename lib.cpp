@@ -30,8 +30,8 @@ bool isPrime(ll n)
 map<ll, ll> primeFactorize(ll n)
 {
     map<ll, ll> res;
-    
-    for (ll i = 2; i * i <= n; ++i) {
+    for (ll i = 2; i * i <= n; ++i) 
+    {
         while (n % i == 0) 
         {
             res[i]++;
@@ -39,7 +39,6 @@ map<ll, ll> primeFactorize(ll n)
         }
     }
     if (n != 1) res[n] = 1;
-
     return res;
 }
 
@@ -47,15 +46,12 @@ map<ll, ll> primeFactorize(ll n)
 vector<ll> divisors(ll n) 
 {
     vector<ll> res;
-
     for (ll i = 1l; i * i <= n; ++i) 
     {
         if (n % i == 0)
         {
             res.push_back(i);
-            ll j = n / i;
-            
-            if (j != i) res.push_back(j);
+            if (n / i != i) res.push_back(n / i);
         }
     }
     sort(res.begin(), res.end());
@@ -81,10 +77,9 @@ ll lcm(ll a, ll b)
 ll powMod(ll x, ll n)
 {
     ll res = 1;
-
     for(ll i = 0; i < n; i++)
         res = res * x % mod;
-    
+
     return res;
 }
 
@@ -93,7 +88,7 @@ ll digitSum(ll n)
 {
     if(n < 10) 
         return n;
-
+    
     return digitSum(n / 10) + n % 10;
 }
 
