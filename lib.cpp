@@ -25,7 +25,7 @@ bool is_prime(ll n) {
 }
 
 
-map<ll, ll> prime_factorize(ll n)
+map<ll, ll> primeFactorize(ll n)
 {
     map<ll, ll> res;
     
