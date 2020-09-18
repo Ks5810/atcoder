@@ -44,7 +44,7 @@ map<ll, ll> primeFactorize(ll n)
 }
 
 
-vector<ll> divisor(ll n) 
+vector<ll> divisors(ll n) 
 {
     vector<ll> res;
 
